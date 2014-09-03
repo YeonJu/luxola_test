@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe "Editing product lists" do 
-
 	let!(:product_list) { ProductList.create(name: "item1", description: "This is item 1.", price: 10)}
 
 	def update_product_list(options={})
@@ -25,7 +24,7 @@ describe "Editing product lists" do
 
 	# spec1
 	it "updates a product lsit successfully with correct information" do
-		
+
 		update_product_list product_list: product_list
 
 		product_list.reload
